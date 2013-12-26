@@ -1,0 +1,44 @@
+body {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+h1 {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 48pt;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	color: #000;
+	line-height: 48pt;
+}
+h1 a, h1 a:hover {
+	color: #000;
+}
+
+h2 {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 24pt;
+	margin-top: 0px;
+	padding-top: 0px;
+	color: #666;
+}
+
+p {
+	text-align: justify;
+	color: #22222a;
+}
+
+.sidebar {
+	padding-top: 86pt;
+}
+
+.sidebar h3 {
+	text-align: right;
+	color: #666;
+}
+
+.sidebar p {
+	text-align: right;
+}
