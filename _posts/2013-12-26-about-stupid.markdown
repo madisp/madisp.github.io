@@ -7,7 +7,7 @@ categories: android, bad, stupid
 
 Some time ago I tried to replicate AngularJS's variant of two-way databinding - which I find
 absolutely lovely - in Android. Angular has a simple expression language that one can use within
-the templates, e.g., say that one wants to display a div only if user is logged in and is an admin, e.g.:
+the templates. Say that one wants to display a div only if user is logged in and is an admin, e.g.:
 
 ```xml
 <div ng-show="user.logged_in && user.is_admin">
