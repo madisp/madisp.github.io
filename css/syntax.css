@@ -23,7 +23,7 @@
 .highlight .kd {  } /* Keyword.Declaration */
 .highlight .kp {  } /* Keyword.Pseudo */
 .highlight .kr {  } /* Keyword.Reserved */
-.highlight .kt {  } /* Keyword.Type */
+.highlight .kt { color: #FF6600; } /* Keyword.Type */
 .highlight .m { color: #CF6A4C; } /* Literal.Number */
 .highlight .s { color: #66FF00 } /* Literal.String */
 .highlight .na { color: #99CC99 } /* Name.Attribute */
