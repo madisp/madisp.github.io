@@ -20,9 +20,9 @@
 .highlight .gu { color: #aaaaaa } /* Generic.Subheading */
 .highlight .gt { color: #aa0000 } /* Generic.Traceback */
 .highlight .kc { color: #339999; } /* Keyword.Constant */
-.highlight .kd {  } /* Keyword.Declaration */
-.highlight .kp {  } /* Keyword.Pseudo */
-.highlight .kr {  } /* Keyword.Reserved */
+.highlight .kd { color: #FF6600;  } /* Keyword.Declaration */
+.highlight .kp { color: #FF6600;  } /* Keyword.Pseudo */
+.highlight .kr { color: #FF6600;  } /* Keyword.Reserved */
 .highlight .kt { color: #FF6600; } /* Keyword.Type */
 .highlight .m { color: #CF6A4C; } /* Literal.Number */
 .highlight .s { color: #66FF00 } /* Literal.String */
