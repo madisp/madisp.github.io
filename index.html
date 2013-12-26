@@ -8,12 +8,10 @@ title: blog.madisp.com
   <h3>{{ post.title }}</h3>
   <p class="meta">{{ post.date | date_to_string }}</p>
   <div class="post"><p>{{ post.content }}</p></div>
+  <h3>Older posts</h3>
   <p>
   {% for p in site.posts offset:1 %}
-    {% if forloop.first %}
-	  <h3>Older posts</h3>
-	{% endif %}
-  <a href="{{ p.url }}">{{ p.title }}</a> - <i>{{ p.date | date_to_string }}</i><br />
+    <a href="{{ p.url }}">{{ p.title }}</a> - <i>{{ p.date | date_to_string }}</i><br />
   {% endfor %}
   </p>
 </div>
