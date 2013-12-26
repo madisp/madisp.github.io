@@ -42,3 +42,17 @@ p {
 .sidebar p {
 	text-align: right;
 }
+
+.highlight {
+	border-radius: 12px;
+	padding: 10px 15px 15px 15px;
+	margin-left: -15px;
+	margin-bottom: 12pt;
+}
+
+code {
+	font-family: Monaco, Consolas, "Liberation Mono", Courier, monospace;
+	font-weight: normal;
+	font-size: 10pt;
+	color: #F8F8F8;
+}
