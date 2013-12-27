@@ -25,9 +25,18 @@ h2 {
 	color: #666;
 }
 
+h4 {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+	margin-top: 1.5rem;
+}
+
 p {
 	text-align: justify;
 	color: #22222a;
+	font-size: 1rem;
 }
 
 .sidebar {
@@ -45,7 +54,7 @@ p {
 
 .highlight {
 	border-radius: 12px;
-	padding: 10px 15px 15px 15px;
+	padding: 10px 13px 15px 13px;
 	margin-left: -15px;
 	margin-bottom: 12pt;
 }
@@ -55,4 +64,13 @@ code {
 	font-weight: normal;
 	font-size: 10pt;
 	color: #F8F8F8;
+	border-radius: 3px;
+	padding: 0px 2px 0px 2px;
+	margin: 0px 2px 0px 2px;
+	background-color: #000000;
+}
+
+pre code {
+	padding: 0px;
+	margin: 0px;
 }

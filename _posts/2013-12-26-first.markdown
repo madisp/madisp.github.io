@@ -1,13 +1,10 @@
 ---
 layout:     post
-title:      Foreword
+title:      Meta - About Me and This Blog
 date:       2013-12-26 15:01:00
 categories: meta
 ---
 
-Obligatory first meta-post about myself and this blog in general.
-
-I'm an Estonian developer based in Stockholm and working mostly with Android. I like to fiddle
-around with _weird_ side projects and I needed a way to document my findings and muse about things in general. Hence, o' visitor, I hope thee find this site useful.
+I'm an Android developer based in Stockholm. I like to fiddle around with _weird_ side projects and I needed a way to document my findings and muse about things in general. Hence, o' visitor, I hope thee find this site useful.
 
 -madis
