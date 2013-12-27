@@ -43,6 +43,6 @@ This kind-of works, but we are already opening a can of worms with state-handlin
 
 Usually to have the layout represent some business logic state one has to set up onSaveInstanceState/onRestoreInstanceState, a bunch of broadcastreceivers/callbacks to receive notifications about changes and the actual viewtree manipulation code on top of that. Needless to say, I really like AngularJS's approach.
 
-So it would be really-really nice if we could do something similar to the AngularJS example in Android. To achieve this I needed a scripting language that I could use in XML layouts and a lightweight interpreter that for it that I could run in Java.
+So it would be really-really nice if we could do something similar to the AngularJS example in Android. To achieve this I needed a scripting language that I could use in XML layouts and a lightweight interpreter for it that I could run in Java.
 
 Enter Stupid.
