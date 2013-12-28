@@ -60,7 +60,7 @@ false
 true
 ```
 
-For a more thorough example, check the calculator sample.
+For a more thorough example, check the [calculator](https://github.com/madisp/stupid-samples/blob/master/calculator/src/main/java/com/madisp/stupid/samples/Calculator.java) sample.
 
 #### Variables
 
@@ -151,3 +151,7 @@ com.madisp.stupid.Block@d0721b0
 > add.(3, 5)
 8
 ```
+
+#### More Samples
+
+See the [stupid-samples](https://github.com/madisp/stupid-samples) repo in github.
