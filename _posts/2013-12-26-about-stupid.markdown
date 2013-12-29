@@ -19,7 +19,7 @@ com.madisp.stupid.Block@783c342b
 #### Obligatory Links and Foreword
 
 * [source](https://github.com/madisp/stupid)
-* [javadoc](http://madisp.com/stupid)
+* [javadoc](http://madisp.com/javadoc/stupid)
 * [binaries (snaphsots)](https://oss.sonatype.org/content/repositories/snapshots/com/madisp/stupid/stupid/)
 
 Some time ago [I tried to replicate](https://github.com/madisp/bad) AngularJS's variant of two-way databinding in Android. I find Angular's approach to data-binding absolutely lovely. It has a simple expression language that one can use within the templates, so naturally, I needed something similar.
