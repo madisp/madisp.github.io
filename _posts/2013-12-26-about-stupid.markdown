@@ -60,7 +60,7 @@ false
 true
 ```
 
-For a more thorough example, check the [calculator](https://github.com/madisp/stupid-samples/blob/master/samples/src/main/java/com/madisp/stubid/sample/Calculator.java) sample.
+For a more thorough example, check the [calculator](https://github.com/madisp/stupid-samples/blob/master/src/main/java/com/madisp/stubid/sample/Calculator.java) sample.
 
 #### Variables
 
