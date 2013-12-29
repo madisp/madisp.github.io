@@ -20,7 +20,6 @@ com.madisp.stupid.Block@783c342b
 
 * [source](https://github.com/madisp/stupid)
 * [javadoc](http://madisp.com/stupid)
-* [binaries](http://dl.bintray.com/madisp/maven/com/madisp/stupid/stupid/) (will be on maven central soon)
 
 Some time ago [I tried to replicate](https://github.com/madisp/bad) AngularJS's variant of two-way databinding in Android. I find Angular's approach to data-binding absolutely lovely. It has a simple expression language that one can use within the templates, so naturally, I needed something similar.
 
@@ -60,7 +59,7 @@ false
 true
 ```
 
-For a more thorough example, check the [calculator](https://github.com/madisp/stupid-samples/blob/master/calculator/src/main/java/com/madisp/stupid/samples/Calculator.java) sample.
+For a more thorough example, check the [calculator](https://github.com/madisp/stupid-samples/blob/master/samples/src/main/java/com/madisp/stubid/sample/Calculator.java) sample.
 
 #### Variables
 
