@@ -2,7 +2,7 @@
 layout:     post
 title:      A Stupid Scripting Language for Java/JVM
 date:       2013-12-27 23:02:45
-categories: android, bad, stupid
+categories: stupid
 ---
 
 ```
