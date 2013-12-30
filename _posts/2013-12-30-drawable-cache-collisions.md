@@ -28,7 +28,7 @@ Some cases of this in the wild:
 
 The fix, if you need to support Gingerbread or older, is to usually add a *aaaa.png* or similarly named file to your project. If you have a lot of drawables then sometimes even that approach can fail, I've seen it happen. Because the fix is so weird I *really* needed to find out what's going on.
 
-***TL;DR*** Before we move on, a quick fix that works even when the *aaaa.png* trick fails. Replace your `0x00000000` (transparent black) color resources with `0xff000000` (transparent white).
+***TL;DR*** Before we move on, a quick fix that works even when the *aaaa.png* trick fails. Replace your `0x00000000` (transparent black) color resources with `0x00ffffff` (transparent white).
 
 ***Quick Investigation into the Patch***
 
@@ -186,6 +186,6 @@ Package Group 0 id=127 packageCount=1 name=com.madisp.android.collision
           (color) #00000000
 ```
 
-Notice the `d=0x00000000` for both our drawable and the transparent color. If we rewrite *colors.xml* so that transparent is `0xff000000` we don't get the collision anymore.
+Notice the `d=0x00000000` for both our drawable and the transparent color. If we rewrite *colors.xml* so that transparent is `0x00ffffff` we don't get the collision anymore.
 
 In part 2 we'll take a look at how Android generates the resource table and what is *an index into the containing resource table's global value string pool*.
