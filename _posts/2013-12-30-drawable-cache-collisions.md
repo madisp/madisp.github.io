@@ -26,17 +26,15 @@ Some cases of this in the wild:
 * [Weird problem about an android drawable (StackOverflow)](http://stackoverflow.com/questions/4435099/weird-problem-about-an-android-drawable)
 * [ImageButton cannot use first alphabetical drawable in the res/drawable folder (AOSP bug tracker)](https://code.google.com/p/android/issues/detail?id=20283)
 
-The fix, if you need to support Gingerbread or older, is to usually add a *aaaa.png* or similarly named file to your project. If you have a lot of drawables then sometimes even that approach can fail (I've seen it happen).
-
-Because the fix is so weird I *really* wanted to find out what's going on. Hopefully this short series of posts will give some insights into the problem.
+The fix, if you need to support Gingerbread or older, is to usually add a *aaaa.png* or similarly named file to your project. If you have a lot of drawables then sometimes even that approach can fail, I've seen it happen. Because the fix is so weird I *really* needed to find out what's going on.
 
 ***TL;DR*** Before we move on, a quick fix that works even when the *aaaa.png* trick fails. Replace your `0x00000000` (transparent black) color resources with `0xff000000` (transparent white).
 
 ***Quick Investigation into the Patch***
 
-First off, lets take a look at the actual [patch](https://android-review.googlesource.com/#/c/15815/4/core/java/android/content/res/Resources.java) to get a sense of whats going on.
+First off, lets take a look at the [patch](https://android-review.googlesource.com/#/c/15815/4/core/java/android/content/res/Resources.java) introduced in Honeycomb. The commit adds a new `LongSparseArray` called `mColorDrawableCache`. Both colors and drawables used to share the same cache - `mDrawableCache` - but apparently the fix was to split them up. This is really interesting and basically points to a hash function / hashmap key collision between colors and drawables, i.e., collisions between a single type of drawables should still be non-existent.
 
-The commit adds a new `LongSparseArray` called `mColorDrawableCache`. Both colors and drawables used to share the same cache - `mDrawableCache` - but apparently the fix was to split them up. This is really interesting and basically points to a hash function / hashmap key collision between colors and drawables, i.e., collisions between a single type of drawables should still be non-existent.
+***Digging into the Caching Key***
 
 Lets take a look at how the hash is calculated in *Resources#loadDrawable*:
 
@@ -68,8 +66,6 @@ Lets take a look at how the hash is calculated in *Resources#loadDrawable*:
 }
 ```
 
-***Digging into the Caching Key***
-
 The key is defined on this line:
 
 ```java
@@ -84,7 +80,7 @@ The [documentation](https://developer.android.com/reference/android/util/TypedVa
 > public int **data**<br />
 > Basic data in the value, interpreted according to *type*
 
-So the caching key is a 64-bit signed integer where the first part, 32-bits, is *information about where the value came from* and the second part, also 32-bits, is the actual data of the value. The data field, as the docs say, is dependant on the type. For non-color drawables the type is actually `0x03`, which indicates a string.<br />
+So the caching key is a 64-bit signed integer where the first part, 32-bits, is *information about where the value came from* and the second part, also 32-bits, is the actual data of the value. The data field, as the docs say, is interpreted according to the type. For non-color drawables the type is `0x03` - a string.
 Indeed, calling `getString(R.drawable.ic_launcher)` returns `res/drawable/ic_launcher.png` which is the path to the bitmap. Checking the native source of [ResourceTypes.h](http://androidxref.com/4.0.3_r1/xref/frameworks/base/include/utils/ResourceTypes.h#232) gives some insights into how the data field is interpreted (parts omitted):
 
 ```cpp
