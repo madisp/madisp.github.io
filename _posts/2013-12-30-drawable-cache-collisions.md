@@ -186,6 +186,6 @@ Package Group 0 id=127 packageCount=1 name=com.madisp.android.collision
           (color) #00000000
 ```
 
-Notice the `d=0x00000000` for both our drawable and the transparent color. If we rewrite *colors.xml* so that transparent is `0xff000000` we don't get the collision any more.
+Notice the `d=0x00000000` for both our drawable and the transparent color. If we rewrite *colors.xml* so that transparent is `0xff000000` we don't get the collision anymore.
 
-In part 2 we'll take a look at how Android generates the resource table and what is an *an index into the containing resource table's global value string pool*.
+In part 2 we'll take a look at how Android generates the resource table and what is *an index into the containing resource table's global value string pool*.
