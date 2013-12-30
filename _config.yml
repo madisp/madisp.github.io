@@ -1,3 +1,5 @@
-name: a devlog of sorts
+name: 'a devlog of sorts'
+description: '@madisp - a devlog of sorts with the occasional rant'
+url: 'http://madisp.com'
 markdown: redcarpet
 pygments: true
