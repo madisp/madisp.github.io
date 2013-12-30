@@ -8,9 +8,10 @@ title: '@madisp'
   <h3>{{ post.title }}</h3>
   <p class="meta">{{ post.date | date_to_string }}</p>
   <div class="post"><p>{{ post.content }}</p></div>
-  <h3>Older posts</h3>
+  <hr>
+  <h3>Recent Posts</h3>
   <p>
-  {% for p in site.posts offset:1 %}
+  {% for p in site.posts offset:1 limit:10 %}
     <a href="{{ p.url }}">{{ p.title }}</a> - <i>{{ p.date | date_to_string }}</i><br />
   {% endfor %}
   </p>

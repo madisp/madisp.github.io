@@ -5,6 +5,6 @@ date:       2013-12-26 15:01:00
 categories: meta
 ---
 
-I'm an Android developer based in Stockholm. I like to fiddle around with _weird_ side projects and I needed a way to document my findings and muse about things in general. Hence, o' visitor, I hope thee find this site useful.
+Holla! My name is Madis Pink, and I'm an Android developer based in Stockholm. I like to fiddle around with _weird_ side projects and I needed a way to document my findings and muse about things in general. Hence, o' visitor, I hope thee find this site useful. (And I hope I can keep this up even after the vacation).
 
 -madis

@@ -7,3 +7,10 @@ layout: default
 <div class="post">
 	<p>{{ content }}</p>
 </div>
+<hr>
+<h3>Recent Posts</h3>
+<p>
+{% for p in site.posts limit:10 %}
+	<a href="{{ p.url }}">{{ p.title }}</a> - <i>{{ p.date | date_to_string }}</i><br />
+{% endfor %}
+</p>
